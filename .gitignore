@@ -1,0 +1,12 @@
+Data/
+
+
+mpl_toolkits_local/
+
+dist/
+
+build/
+
+__pycache__/
+
+*.spec
