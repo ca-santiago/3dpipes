@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python 3D Plot Desktop App for Oil Drilling
 
 This app was developet in order to create a tool for plotting 3D pipes and surfaces related to oil drilling.
