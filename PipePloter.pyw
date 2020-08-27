@@ -31,17 +31,12 @@ def Graficar(data):
 	ax = Axes3D(canvas)
 
 	# LLamado a las funciones independientes de graficación
-	try:
-		create_surface(data, ax)
-		create_pipes(data, ax)
+	
+	create_surface(data, ax)
+	create_pipes(data, ax)
 
-		plt.show()
+	plt.show()
 
-	except expression as identifier:
-		pass
-
-
-#
 
 
 def create_surface(data = [] , enviroment = None):
@@ -57,7 +52,7 @@ def create_surface(data = [] , enviroment = None):
 		axis = Axes3D(__canvas)
 
 	if not data:
-		print('Data array invalid')
+		#print('Data array invalid')
 		return Exception
 
 
@@ -72,7 +67,7 @@ def create_surface(data = [] , enviroment = None):
 
 		formacion = np.array(diccionario_formaciones[sub])
 
-		# Se extrane los valores X y Y y se ordenan
+		# Se extraen los valores X y Y y se ordenan de mayor a menor
 		X = formacion[:,2]
 		X = [float(i) for i in X]
 		X.sort()
@@ -81,7 +76,7 @@ def create_surface(data = [] , enviroment = None):
 			)
 
 		Y = formacion[:,3]
-		Y = [float(i) for i in Y]
+		# Y = [float(i) for i in Y]
 		Y.sort()
 		Y = np.array(
 				[Y]
@@ -189,16 +184,15 @@ class Ventana(tk.Tk):
 
 		self.geometry('400x200')
 
-
-		# Iniciación de variables
+		# Initialization of state variables.
 
 		self.__datos_pozos_actual = []
-		self.last_path = '/'
+		self.last_path =  os.path.dirname(__file__)
 
 	def buscar_archivo(self):
 		archivo_pozos = filedialog.askopenfilename(initialdir= self.last_path,title = 'Elige un archivo',filetype=(('csv','*.csv'),('Excél','*.xlsx')))
 		try:
-			if archivo_pozos is not '':
+			if archivo_pozos != '':
 				salida = []
 				__salida = []
 
@@ -220,8 +214,6 @@ class Ventana(tk.Tk):
 					for i in lineas:
 						salida.append(i.split(','))
 
-						print(i)
-
 					#Separo el string de acuerdo al ;
 					for f in salida:
 						f = f[0].split(';')
@@ -232,7 +224,7 @@ class Ventana(tk.Tk):
 
 				self.__datos_pozos_actual = __salida
 
-				# Creo el botón graficár en caso de que todo este correcto
+				# Creating the plot button
 				self.quitButton = tk.Button(self, width=12, text='Graficar',command=self.call_plot)
 				self.quitButton.grid(row=1, column=0, padx=8, pady=8)
 
