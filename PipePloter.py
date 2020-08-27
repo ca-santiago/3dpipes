@@ -252,8 +252,10 @@ if __name__ == "__main__":
 
 """
 	The next lines are the format example of the input files
-	if the file choosen arent like this format it will not work properly
+	if the file choosen is not like this format it will not work properly
 """
+#[ [drillingName,surfaceName,xCord,yCord,zCord],[...] ]
+
 # [
 # 	['T-1', 'FILISOLA', 476051.01, 1979266.25, 0],
 # 	['T-1', 'MIOCENO', 476051.01, 1979266.25, -2778],
