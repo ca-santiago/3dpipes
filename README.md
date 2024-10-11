@@ -9,6 +9,7 @@ In the date folder there is some SCV files you can try.
 ---
 
 📫 Contact: casantiago.me@gmail.com
-📌 LinkedIn: [Carmen Santiago]('https://www.linkedin.com/in/carmen-santiago-casj/')
+
+📌 LinkedIn: [Carmen Santiago](https://www.linkedin.com/in/carmen-santiago-casj/)
 
 ---
