@@ -8,8 +8,7 @@ In the date folder there is some SCV files you can try.
 
 ---
 
-📫 Contact: greminoficial@gmail.com\
-⚡ Twitter: [@grem_dev]('https://twitter.com/grem_dev')\
+📫 Contact: casantiago.me@gmail.com
 📌 LinkedIn: [Carmen Santiago]('https://www.linkedin.com/in/carmen-santiago-casj/')
 
 ---
